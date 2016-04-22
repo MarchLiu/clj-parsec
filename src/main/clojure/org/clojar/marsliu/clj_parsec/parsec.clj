@@ -8,10 +8,10 @@
   If a parser throw exception, throw it and exit, else return last result
   and residue state.
     "
-  [data & forms]
-  (loop [data data, forms forms]
+  [arg & forms]
+  (loop [arg arg, forms forms]
     (let [form (first forms), next-forms (next forms)
-          tail (list form data)]
+          tail (with-meta (list form arg) (meta form))]
       (if (nil? next-forms) tail
           (recur (list second tail) next-forms)))))
 
@@ -37,7 +37,7 @@
                    `(let [[results# data#] ~data,
                           [result# residue#] (~func data#)]
                       (list results# residue#)))]
-        (recur tail (next forms)))
+        (recur (with-meta tail (meta func)) (next forms)))
       data)))
 
 (defn parse
