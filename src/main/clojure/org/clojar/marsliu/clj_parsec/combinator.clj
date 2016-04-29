@@ -1,5 +1,5 @@
 (ns org.clojar.marsliu.clj-parsec.combinator
-  (:use [org.clojar.marsliu.clj-parsec.parsec :only [bind then jump]])
+  (:use [org.clojar.marsliu.clj-parsec.parsec :only [bind then jump]]))
 
 (defn try-pipe 
   "try-pipe create a function, accept a results seq and a data,
