@@ -46,7 +46,7 @@ string (i.e. s)."
           (->> (format "Except char in %s but get %s" chars result)
                IllegalStateException. throw))))))
 
-(defn uint-token
+(defn uint
   "This parser parses a string of digits sequence. The result should be parse a integer."
   [data]
   (let [[result residue] ((many1 digit) data)]
