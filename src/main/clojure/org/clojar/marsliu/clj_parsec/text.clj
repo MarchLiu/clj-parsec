@@ -4,7 +4,7 @@
         [clojure.string :refer [join]]))
 
 (defn char
-  "(ch c) parses a single character c. Returns the parsed character (i.e. c).
+  "(char c) parses a single character c. Returns the parsed character (i.e. c).
   semiColon = char ’;’"
   [^Character c]
   (fn [data]
