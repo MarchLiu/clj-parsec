@@ -57,3 +57,30 @@
                            residue)
                      (list results residue))))]
       (reduce step [{} data] forms))))
+
+(defn bind
+  "if parser success, pass the result into binder and get a new parser,
+pass residue data into it and return [result residue]."
+  [parser binder]
+  (fn [data]
+    (let [[result state] (parser data)
+          action (binder result)]
+      (action state))))
+
+(defn then
+  "if parser x success, parse the residue party into y and return 
+[result residue]."
+  [x y]
+  (fn [data]
+    (let [[_ state] (x data)]
+      (y state))))
+
+(defn jump
+  "if x parser success then call y, if y success, return x's result 
+and y's residue, else throw error."
+  [x y]
+  (fn [data]
+    (let [[result state] (x data)
+          [_ residue] (y data)]
+      [result residue])))
+

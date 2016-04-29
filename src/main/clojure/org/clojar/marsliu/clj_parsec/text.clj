@@ -1,6 +1,7 @@
 (ns org.clojar.marsliu.clj-parsec.text
-  (:use org.clojar.marsliu.clj-parsec.parsec)
-  (:use org.clojar.marsliu.clj-parsec.atom))
+  (:use [org.clojar.marsliu.clj-parsec.atom :refer [one]]
+        [org.clojar.marsliu.clj-parsec.combinator :refer [skip many1]]
+        [clojure.string :refer [join]]))
 
 (defn char
   "(ch c) parses a single character c. Returns the parsed character (i.e. c).
@@ -32,8 +33,8 @@ string (i.e. s)."
       (->> (format "Except a digit char but get %s" result)
            IllegalStateException. throw))))
 
-
 (defn any-char
+  "This parser succeeds for any character. Returns the parsed character."
   [^String chars]
   (fn [data]
     (let [[result residue] (one data)]
@@ -44,3 +45,28 @@ string (i.e. s)."
             (recur (first items) (next items)))
           (->> (format "Except char in %s but get %s" chars result)
                IllegalStateException. throw))))))
+
+(defn uint-token
+  "This parser parses a string of digits sequence. The result should be parse a integer."
+  [data]
+  (let [[result residue] ((many1 digit) data)]
+    [(join result) residue]))
+
+(defn space
+  "Parses a white space character. Returns the parsed character."
+  [data]
+  (let [[result residue] (one data)]
+    (if (Character/isWhitespace result) [result residue]
+        (->> (format "Except spaces but get %s " result)
+             IllegalStateException. throw))))
+
+(defn newline
+  "Parses a newline character (’\n’). Returns a newline character."
+  [data]
+  ((char \newline) data))
+
+
+(defn spaces
+  "Skips zero or more white space characters. See also skip."
+  [data]
+  ((skip space) data))

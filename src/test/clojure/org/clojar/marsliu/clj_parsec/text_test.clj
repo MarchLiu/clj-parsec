@@ -15,7 +15,6 @@
                      (recur residue))))]
     (helper data)))
 
-
 (deftest test-str-0
   "test str parser 0"
   (let [data "It is a sample string"]
@@ -26,8 +25,20 @@
       (is (= word "It "))
       (is (= (s/join residue) "is a sample string")))))
 
-
-(deftest any-char-0
+(deftest test-any-char-0
   "test any-char parser 0"
   (let [data "It is a sample string", [ch residue] ((t/any-char "It") data)]
     (is (= ch \I))))
+
+(deftest test-space
+  "test space parser"
+  (let [data " There is a space at start."
+        [ch residue] (t/space data)]
+    (is (= ch \space)
+        (= residue (rest data)))))
+
+(deftest test-spaces
+  "test spaces parser"
+  (let [data "     There are spaces at start."
+        [chars residue] (t/spaces data)]
+    (is (= (s/join residue) "There are spaces at start."))))

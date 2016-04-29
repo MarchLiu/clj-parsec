@@ -1,6 +1,5 @@
 (ns org.clojar.marsliu.clj-parsec.combinator
-  (:use org.clojar.marsliu.clj-parsec.parsec)
-  (:use org.clojar.marsliu.clj-parsec.atom))
+  (:use [org.clojar.marsliu.clj-parsec.parsec :only [bind then jump]])
 
 (defn try-pipe 
   "try-pipe create a function, accept a results seq and a data,
@@ -47,12 +46,12 @@ data use the parser. Return [residue true] if parsed. If
 failed, just return [inputs false]. It is helper for some 
   combinator not need save result that like skip and skip1."
   [parser]
-  (fn [results data]
+  (fn [data]
     (try
       (let [[result residue] (parser data)]
-        [(cons result results) residue true])
+        [residue true])
       (catch Exception e
-        [results data false]))))
+        [data false]))))
 
 (defn skip
   "skip create a parser, just use parser consume the data and 
@@ -61,7 +60,7 @@ without results. It return [nil residue]."
   (fn [data]
     (let [p (try-then parser)]
       (loop [data data]
-        (let [[_ residue success?] (try-then data)]
+        (let [[residue success?] (p data)]
           (if success? (recur residue)
               [nil residue]))))))
 
@@ -72,37 +71,7 @@ return [nil residue]."
   [parser]
   (fn [data]
     (parser data)
-    (let [p (try-then parser)]
-      (loop [data data]
-        (let [[_ residue success?] (try-then data)]
-          (if success? (recur residue)
-              [nil residue]))))))
-
-(defn bind
-  "if parser success, pass the result into binder and get a new parser,
-pass residue data into it and return [result residue]."
-  [parser binder]
-  (fn [data]
-    (let [[result state] (parser data)
-          action (binder result)]
-      (action state))))
-
-(defn then
-  "if parser x success, parse the residue party into y and return 
-[result residue]."
-  [x y]
-  (fn [data]
-    (let [[_ state] (x data)]
-      (y state))))
-
-(defn over
-  "if x parser success then call y, if y success, return x's result 
-and y's residue, else throw error."
-  [x y]
-  (fn [data]
-    (let [[result state] (x data)
-          [_ residue] (y data)]
-      [result residue])))
+    ((skip parser) data)))
 
 (defn sepBy
   "(sepBy p sep) parses zero or more occurrences of p, separated 
@@ -143,4 +112,4 @@ parser."
 Returns the value returned by p."
   [open close p]
   (fn [data]
-    (then open (over p close))))
+    (then open (jump p close))))
