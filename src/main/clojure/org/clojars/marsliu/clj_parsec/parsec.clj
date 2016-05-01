@@ -84,6 +84,6 @@ and y's residue, else throw error."
   [x y]
   (fn [data]
     (let [[result state] (x data)
-          [_ residue] (y data)]
+          [_ residue] (y state)]
       [result residue])))
 

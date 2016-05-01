@@ -15,9 +15,10 @@ inputs and false. It is helper for seq combinators as many and
       (catch Exception e
         [results data false]))))
 
-(defn many [parser]
+(defn many 
   "(many p) applies the parser p zero or more times. Returns a list 
-of the returned values of p."
+  of the returned values of p."
+  [parser]
   (fn [data]
     (loop [results '(), data data, continue? true]
       (if continue?
@@ -26,9 +27,10 @@ of the returned values of p."
           (recur res residue success?))
         [(reverse results) data]))))
 
-(defn many1 [parser]
+(defn many1 
   "(many1 p) applies the parser p one or more times. Returns a list 
-of the returned values of p."
+  of the returned values of p."
+  [parser]
   (fn [data]
     (let [[result residue] (parser data)]
       (loop [results (list result),
