@@ -114,4 +114,4 @@ parser."
 Returns the value returned by p."
   [open close p]
   (fn [data]
-    (then open (jump p close))))
+    ((then open (jump p close)) data)))
