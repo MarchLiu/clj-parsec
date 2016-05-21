@@ -39,7 +39,7 @@ string (i.e. s)."
   (fn [data]
     (let [[result residue] (one data)]
       (loop [item (first chars) items (next chars)]
-        (if items
+        (if item
           (if (= item result)
             [result residue]
             (recur (first items) (next items)))
