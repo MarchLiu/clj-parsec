@@ -1,5 +1,6 @@
 (ns org.clojars.marsliu.clj-parsec.combinator
-  (:use [org.clojars.marsliu.clj-parsec.parsec :only [bind then jump]]))
+  (:use [org.clojars.marsliu.clj-parsec.parsec :refer [bind then jump]]
+        [org.clojars.marsliu.clj-parsec.atom :refer [return]]))
 
 (defn try-pipe 
   "try-pipe create a function, accept a results seq and a data,
@@ -108,6 +109,17 @@ parser."
         (parser data)
         (catch Exception e
           ((choice (first parsers) (rest parsers)) data))))))
+
+(defn option
+  "(option parser value) tries to apply the parser to data and return [result residue].
+And return [value data] if parser failed."
+  [parser value]
+  (fn [data]
+    (try
+      (parser data)
+      (catch Exception e
+        (return value)))))
+
 
 (defn between
   "(between open close p)  parses open, followed by p and close. 

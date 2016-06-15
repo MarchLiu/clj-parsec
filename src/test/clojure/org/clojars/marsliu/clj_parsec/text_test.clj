@@ -42,3 +42,21 @@
   (let [data "     There are spaces at start."
         [chars residue] (t/spaces data)]
     (is (= (s/join residue) "There are spaces at start."))))
+
+(deftest test-unsigned-integer
+  "test unsigned float parser"
+  (are [data result residue] (= (t/unsigned-integer data) [result residue])
+    "2343" "2343" '()
+    "0073" "0073" '()
+    "54387abc" "54387" '(\a \b \c)))
+
+(deftest test-unsigned-integer-failed
+  "test unsigned float parser exception"
+    (is (thrown? IllegalStateException (t/unsigned-integer "not digit"))))
+
+(deftest test-unsigned-float
+  "test unsigned float parser"
+  (are [data result residue] (= (t/unsigned-float data) [result residue])
+    "0.1" "0.1" '()
+    ".768" "0.768" '()
+    "3.14f" "3.14" '(\f)))

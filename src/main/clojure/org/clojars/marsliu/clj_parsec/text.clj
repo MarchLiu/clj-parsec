@@ -1,6 +1,7 @@
 (ns org.clojars.marsliu.clj-parsec.text
   (:use [org.clojars.marsliu.clj-parsec.atom :refer [one]]
-        [org.clojars.marsliu.clj-parsec.combinator :refer [skip many1]]
+        [org.clojars.marsliu.clj-parsec.combinator :refer [try-then try-pipe skip many1]]
+        [org.clojars.marsliu.clj-parsec.parsec :refer [ >> ]]
         [clojure.string :refer [join]]))
 
 (defn char
@@ -46,11 +47,40 @@ string (i.e. s)."
           (->> (format "Except char in %s but get %s" chars result)
                IllegalStateException. throw))))))
 
-(defn uint
-  "This parser parses a string of digits sequence. The result should be parse a integer."
+(defn unsigned-integer
+  "This parser parses a string of digits sequence. The result should be parse a unsigned integer."
   [data]
   (let [[result residue] ((many1 digit) data)]
     [(join result) residue]))
+
+(defn integer
+  "This parser parses a string of digits sequence. The result should be parse a integer."
+  [data]
+  (let [[res success?] (try-then (char \-))]
+    (if success?
+      (let [[result residue] (unsigned-integer res)]
+        [(join ["-" result]) residue])
+      (unsigned-integer res))))
+
+(defn unsigned-float
+  "This parser parses a string of sequence. The result should be parse a unsigned float
+as xx.xxx or .xxx."
+  [data]
+  (let [[[left] res success?] ((try-pipe unsigned-integer) [] data)]
+      (let [[right residue] (>> res (char \.) unsigned-integer)]
+        (if success?
+          [(join [left "." right]) residue]
+          [(join ["0." right]) residue]))))
+
+(defn float
+  "This parser parses a string of sequence. The result should be parse a unsigned float
+as xx.xxx or .xxx."
+  [data]
+  (let [[res success?] (try-then (char \-))]
+    (if success?
+      (let [[right residue] (unsigned-float res)]
+          [(join ["-" right]) residue])
+      (unsigned-float res))))
 
 (defn space
   "Parses a white space character. Returns the parsed character."
@@ -64,7 +94,6 @@ string (i.e. s)."
   "Parses a newline character (’\n’). Returns a newline character."
   [data]
   ((char \newline) data))
-
 
 (defn spaces
   "Skips zero or more white space characters. See also skip."

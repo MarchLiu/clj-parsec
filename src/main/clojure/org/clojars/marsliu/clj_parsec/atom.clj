@@ -4,13 +4,13 @@
   (if (nil? data) (throw (IllegalStateException. "eof")))
   (if (not (seq data))
     (throw (IllegalArgumentException. "need a sequence")))
-  (if (not (empty? data))
+  (if-not (empty? data)
     [(first data) (rest data)]
     (throw (IllegalStateException. "eof"))))
 
 (defn eof [data]
   (if (nil? data) [nil '()])
-  (if (not (empty? data))
+  (if-not (empty? data)
       (throw (IllegalStateException.
               (format "Expect end of flow but %s." data)))
       [nil '()]))

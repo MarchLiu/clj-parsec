@@ -1,5 +1,5 @@
 (ns org.clojars.marsliu.clj-parsec.parsec
-  (:use org.clojars.marsliu.clj-parsec.atom))
+  (:use [org.clojars.marsliu.clj-parsec.atom :refer [return]]))
 
 (defmacro >>
   "Threads the state through the parsers. Inserts state as the
@@ -8,8 +8,8 @@
   If a parser throw exception, throw it and exit, else return last result
   and residue state.
     "
-  [arg & forms]
-  (loop [arg arg, forms forms]
+  [data & forms]
+  (loop [arg data, forms forms]
     (let [form (first forms), next-forms (next forms)
           tail (with-meta (list form arg) (meta form))]
       (if (nil? next-forms) tail
