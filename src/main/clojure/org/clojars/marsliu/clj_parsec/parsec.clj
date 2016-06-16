@@ -70,8 +70,9 @@
     (let [step (fn [state form]
                  (let [[results data] state,
                        [result residue] (form data)]
-                   [(cons result results) residue]))]
-      (reduce step [[] data] forms))))
+                   [(cons result results) residue]))
+          [res residue] (reduce step [[] data] forms)]
+      [(reverse res) residue])))
 
 
 (defn bind
