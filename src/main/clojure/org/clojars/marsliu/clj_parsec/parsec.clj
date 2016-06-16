@@ -61,6 +61,19 @@
                      (list results residue))))]
       (reduce step [{} data] forms))))
 
+(defn chain
+  "A combinator pipe. It just parse everyone, and
+  pass the result and residue data to rest form. 
+  It save the result into result vector."
+  [& forms]
+  (fn [data]
+    (let [step (fn [state form]
+                 (let [[results data] state,
+                       [result residue] (form data)]
+                   [(cons result results) residue]))]
+      (reduce step [[] data] forms))))
+
+
 (defn bind
   "if parser success, pass the result into binder and get a new parser,
 pass residue data into it and return [result residue]."
