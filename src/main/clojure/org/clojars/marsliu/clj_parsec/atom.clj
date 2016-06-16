@@ -17,25 +17,25 @@
 
 (defn by-pred [pred]
   (fn [data]
-    (let [head (one data)]
-      (if (pred head) [head (rest data)]
+    (let [[head residue] (one data)]
+      (if (pred head) [head residue]
           (->> (format "Predicate %s failed for %s." pred, head)
                IllegalStateException. throw)))))
 
 (defn eq [value]
   (fn [data]
-    (let [head (one data)]
-      (if (= value head) [head (rest data)]
+    (let [[head residue] (one data)]
+      (if (= value head) [head residue]
           (->> (format "Expect %s equal to %s." head value)
                IllegalStateException. throw)))))
 
 (defn neq [value]
   (fn [data]
-    (let [head (one data)]
+    (let [[head residue] (one data)]
       (if (= value head)
         (->> (format "Expect %s not equal to %s." head value)
              IllegalStateException. throw)
-        [head (rest data)]))))
+        [head residue]))))
 
 (defn one-of [values]
   (fn [data]
