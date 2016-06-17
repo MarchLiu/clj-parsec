@@ -108,7 +108,7 @@ parser."
       (try
         (parser data)
         (catch Exception e
-          ((choice (first parsers) (rest parsers)) data))))))
+          ((apply choice parsers) data))))))
 
 (defn option
   "(option parser value) tries to apply the parser to data and return [result residue].
