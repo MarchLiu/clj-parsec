@@ -118,7 +118,7 @@ And return [value data] if parser failed."
     (try
       (parser data)
       (catch Exception e
-        (return value)))))
+        [value data]))))
 
 
 (defn between

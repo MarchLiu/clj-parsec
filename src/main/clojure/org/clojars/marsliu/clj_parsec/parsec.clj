@@ -74,7 +74,6 @@
           [res residue] (reduce step [[] data] forms)]
       [(reverse res) residue])))
 
-
 (defn bind
   "if parser success, pass the result into binder and get a new parser,
 pass residue data into it and return [result residue]."
