@@ -2,8 +2,6 @@
 
 (defn one [data]
   (if (nil? data) (throw (IllegalStateException. "eof")))
-  (if (not (seq data))
-    (throw (IllegalArgumentException. "need a sequence")))
   (if-not (empty? data)
     [(first data) (rest data)]
     (throw (IllegalStateException. "eof"))))
