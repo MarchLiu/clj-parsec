@@ -1,6 +1,6 @@
 (ns org.clojars.marsliu.clj-parsec.combinator
-  (:use [org.clojars.marsliu.clj-parsec.parsec :refer [bind then jump]]
-        [org.clojars.marsliu.clj-parsec.atom :refer [return]]))
+  (:use [org.clojars.marsliu.clj-parsec.parsec :refer [>> bind then jump]]
+        [org.clojars.marsliu.clj-parsec.atom :refer [one return]]))
 
 (defn try-pipe 
   "try-pipe create a function, accept a results seq and a data,
@@ -42,6 +42,17 @@ inputs and false. It is helper for seq combinators as many and
                 ((try-pipe parser) results data)]
             (recur res residue success?))
           [(reverse results) data])))))
+
+(defn find-first
+  "(find-first p) try p on data, return the result and residue, or skip one and try next,
+until eof."
+  [parser]
+  (fn [data]
+    (loop [[[result] residue success?] ((try-pipe parser) [] data)]
+      (if success?
+        [result residue]
+        (let [[_ res] (one residue)]
+          (recur ((try-pipe parser) [] res)))))))
 
 (defn try-then 
   "try-then create a function, accept data and try to parse the 
@@ -120,10 +131,32 @@ And return [value data] if parser failed."
       (catch Exception e
         [value data]))))
 
-
 (defn between
   "(between open close p)  parses open, followed by p and close. 
 Returns the value returned by p."
   [open close p]
   (fn [data]
     ((then open (jump p close)) data)))
+
+(defn success?
+  "(success? parser) just  try the parser and return true/false and the residue."
+  [parser]
+  (fn [data]
+    (try
+      (let [[_ residue] (parser data)]
+        [true residue])
+      (catch Exception e
+        [false data]))))
+
+(defn many-till
+  "manyTill p end applies parser p zero or more times until parser end succeeds. Returns 
+  the list of values returned by p. "
+  [parser end]
+  (fn [data]
+    (loop [res '() state data]
+      (let [[ok? residue] ((success? end) state)]
+        (if ok?
+          [(reverse res) residue]
+          (let [[result tail] (parser state)]
+            (recur (cons result res) tail)))))))
+
