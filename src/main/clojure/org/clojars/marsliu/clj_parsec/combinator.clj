@@ -131,12 +131,6 @@ And return [value data] if parser failed."
       (catch Exception e
         [value data]))))
 
-(defn between
-  "(between open close p)  parses open, followed by p and close. 
-Returns the value returned by p."
-  [open close p]
-  (fn [data]
-    ((then open (jump p close)) data)))
 
 (defn success?
   "(success? parser) just  try the parser and return true/false and the residue."
@@ -160,3 +154,13 @@ Returns the value returned by p."
           (let [[result tail] (parser state)]
             (recur (cons result res) tail)))))))
 
+(defn between
+  "(between open close p)  parses open, followed by p and close. 
+Returns the value returned by p. If only (between open close), 
+just return (then open (many-till p close))"
+  ([open close p]
+   (fn [data]
+     ((then open (jump p close)) data)))
+  ([open close]
+   (fn [data]
+     (then open (many-till (many one) close)))))
