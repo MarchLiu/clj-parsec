@@ -163,4 +163,4 @@ just return (then open (many-till p close))"
      ((then open (jump p close)) data)))
   ([open close]
    (fn [data]
-     (then open (many-till (many one) close)))))
+     (then open (many-till one close)))))
