@@ -157,7 +157,7 @@ And return [value data] if parser failed."
 (defn between
   "(between open close p)  parses open, followed by p and close. 
 Returns the value returned by p. If only (between open close), 
-just return (then open (many-till p close))"
+just return (then open (many-till one close))"
   ([open close p]
    (fn [data]
      ((then open (jump p close)) data)))
