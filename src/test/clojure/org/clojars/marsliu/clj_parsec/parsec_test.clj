@@ -62,7 +62,7 @@
 (deftest test-parse-0
   "test parse combinator 0"
   (are [data parser results residue]
-      (= ((apply parse parser) data) [results residue])
+    (= ((apply parse parser) data) [results residue])
     "abc" [one one] {} '(\c)
     "abc" [one one one] {} '()
     "abcd" [[:a one] one [:c one]] {:a \a :c \c} '(\d) ))
