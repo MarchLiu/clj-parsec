@@ -1,9 +1,9 @@
-(ns clojure.tools.parsec.combinator-test
+(ns clojure.parsec.combinator-test
   (:use clojure.test
-        [clojure.tools.parsec.parsec :refer :all]
-        [clojure.tools.parsec.atom :refer [one]]
-        [clojure.tools.parsec.combinator :refer :all]
-        [clojure.tools.parsec.text :refer [char]]))
+        [clojure.parsec.parsec :refer :all]
+        [clojure.parsec.atom :refer [one]]
+        [clojure.parsec.combinator :refer :all]
+        [clojure.parsec.text :refer [char]]))
 
 (deftest test-many-0
   "test many combinator 0"

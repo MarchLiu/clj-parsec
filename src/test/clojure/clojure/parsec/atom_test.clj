@@ -1,6 +1,6 @@
-(ns clojure.tools.parsec.atom-test
+(ns clojure.parsec.atom-test
   (:use clojure.test)
-  (:use clojure.tools.parsec.atom))
+  (:use clojure.parsec.atom))
 
 (deftest test-one
   "test one parser"

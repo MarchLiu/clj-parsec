@@ -1,4 +1,4 @@
-(ns clojure.tools.parsec.atom)
+(ns clojure.parsec.atom)
 
 (defn one [data]
   (if (nil? data) (throw (IllegalStateException. "eof")))

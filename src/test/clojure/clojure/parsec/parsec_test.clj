@@ -1,7 +1,7 @@
-(ns clojure.tools.parsec.parsec-test
+(ns clojure.parsec.parsec-test
   (:use clojure.test)
-  (:use clojure.tools.parsec.parsec)
-  (:use clojure.tools.parsec.atom))
+  (:use clojure.parsec.parsec)
+  (:use clojure.parsec.atom))
 
 (deftest test>>0
   "test >> micro 0"

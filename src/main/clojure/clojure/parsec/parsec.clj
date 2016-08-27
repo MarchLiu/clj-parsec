@@ -1,5 +1,5 @@
-(ns clojure.tools.parsec.parsec
-  (:use [clojure.tools.parsec.atom :refer [return]]))
+(ns clojure.parsec.parsec
+  (:use [clojure.parsec.atom :refer [return]]))
 
 (defmacro >>
   "Threads the state through the parsers. Inserts state as the

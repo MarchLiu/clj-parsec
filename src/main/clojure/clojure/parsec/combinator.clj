@@ -1,6 +1,6 @@
-(ns clojure.tools.parsec.combinator
-  (:use [clojure.tools.parsec.parsec :refer [>> bind then jump]]
-        [clojure.tools.parsec.atom :refer [one return]]))
+(ns clojure.parsec.combinator
+  (:use [clojure.parsec.parsec :refer [>> bind then jump]]
+        [clojure.parsec.atom :refer [one return]]))
 
 (defn try-pipe 
   "try-pipe create a function, accept a results seq and a data,

@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="61eb064d-6597-42e0-8858-7a09d13e5e5b" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/clojure/org/clojars/marsliu/clj_parsec/atom.clj" afterPath="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/atom.clj" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/clojure/org/clojars/marsliu/clj_parsec/combinator.clj" afterPath="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/combinator.clj" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/clojure/org/clojars/marsliu/clj_parsec/parsec.clj" afterPath="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/parsec.clj" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/clojure/org/clojars/marsliu/clj_parsec/text.clj" afterPath="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/text.clj" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/clojure/org/clojars/marsliu/clj_parsec/atom_test.clj" afterPath="$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/atom_test.clj" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/clojure/org/clojars/marsliu/clj_parsec/combinator_test.clj" afterPath="$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/combinator_test.clj" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/clojure/org/clojars/marsliu/clj_parsec/parsec_test.clj" afterPath="$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/parsec_test.clj" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/clojure/org/clojars/marsliu/clj_parsec/text_test.clj" afterPath="$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/text_test.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/atom.clj" afterPath="$PROJECT_DIR$/src/main/clojure/clojure/parsec/atom.clj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/combinator.clj" afterPath="$PROJECT_DIR$/src/main/clojure/clojure/parsec/combinator.clj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/parsec.clj" afterPath="$PROJECT_DIR$/src/main/clojure/clojure/parsec/parsec.clj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/text.clj" afterPath="$PROJECT_DIR$/src/main/clojure/clojure/parsec/text.clj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/atom_test.clj" afterPath="$PROJECT_DIR$/src/test/clojure/clojure/parsec/atom_test.clj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/combinator_test.clj" afterPath="$PROJECT_DIR$/src/test/clojure/clojure/parsec/combinator_test.clj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/parsec_test.clj" afterPath="$PROJECT_DIR$/src/test/clojure/clojure/parsec/parsec_test.clj" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/text_test.clj" afterPath="$PROJECT_DIR$/src/test/clojure/clojure/parsec/text_test.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="clj-parsec.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,96 +32,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="project.clj" pinned="false" current-in-tab="false">
+      <file leaf-file-name="project.clj" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/project.clj">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
               <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="atom.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/atom.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="152">
-              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="combinator.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/combinator.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parsec.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/parsec.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="text.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/text.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="atom_test.clj" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/atom_test.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name=".lein-repl-history" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.lein-repl-history">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="464" column="11" selection-start-line="464" selection-start-column="11" selection-end-line="464" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="combinator_test.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/combinator_test.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="148">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="parsec_test.clj" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/parsec_test.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
-              <folding>
-                <marker date="1472286274000" expanded="true" signature="285:430" ph="(deftest test&gt;&gt;1 ...)" />
-                <marker date="1472286274000" expanded="true" signature="432:575" ph="(deftest test&gt;&gt;2 ...)" />
-                <marker date="1472286274000" expanded="true" signature="1366:1624" ph="(deftest test-parse-0 ...)" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -143,12 +59,12 @@
         <option value="$PROJECT_DIR$/src/test/clojure/org/clojars/marsliu/clj_parsec/parsec_test.clj" />
         <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/atom.clj" />
-        <option value="$PROJECT_DIR$/.lein-repl-history" />
-        <option value="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/combinator.clj" />
         <option value="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/parsec.clj" />
         <option value="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/text.clj" />
         <option value="$PROJECT_DIR$/src/test/clojure/clojure/tools/clj-parsec/atom_test.clj" />
         <option value="$PROJECT_DIR$/src/test/clojure/clojure/tools/clj-parsec/combinator_test.clj" />
+        <option value="$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/combinator.clj" />
+        <option value="$PROJECT_DIR$/.lein-repl-history" />
       </list>
     </option>
   </component>
@@ -265,10 +181,6 @@
               <option name="myItemId" value="clojure" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="parsec" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -316,7 +228,16 @@
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="ReplState" timestamp="1471677970407">{:repl-history {:ide [], :local [&quot;(println \&quot;Hello\&quot;)&quot;], :remote []}}</component>
-  <component name="RunManager" selected="Leiningen.leiningen test all">
+  <component name="RunManager" selected="Clojure Application.text_test">
+    <configuration default="false" name="text_test" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
+      <module name="clj-parsec" />
+      <setting name="path" value="$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/text_test.clj" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec" />
+      <setting name="repl" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings>
@@ -1154,10 +1075,16 @@
       </LeiningenRunnerParameters>
       <method />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Clojure REPL.REPL for clj-parsec" />
       <item index="1" class="java.lang.String" itemvalue="Leiningen.leiningen test all" />
+      <item index="2" class="java.lang.String" itemvalue="Clojure Application.text_test" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Clojure Application.text_test" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SbtLocalSettings">
     <option name="externalProjectsViewState">
@@ -1184,13 +1111,13 @@
       <workItem from="1471673818214" duration="2956000" />
       <workItem from="1471758546522" duration="74000" />
       <workItem from="1472283608344" duration="19000" />
-      <workItem from="1472283653638" duration="2656000" />
+      <workItem from="1472283653638" duration="3869000" />
     </task>
     <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7235000" />
+    <option name="totallyTimeSpent" value="8448000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1203,18 +1130,19 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32984293" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24513888" sideWeight="0.5111372" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2446352" sideWeight="0.48886284" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2446352" sideWeight="0.48886284" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1232,7 +1160,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection Results" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1266,7 +1193,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/combinator.clj">
+    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/parsec/combinator.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2679">
           <caret line="141" column="24" selection-start-line="141" selection-start-column="24" selection-end-line="141" selection-end-column="24" />
@@ -1274,7 +1201,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/atom_test.clj">
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/atom_test.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
@@ -1282,7 +1209,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/combinator_test.clj">
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/combinator_test.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
@@ -1290,14 +1217,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/parsec_test.clj">
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/parsec_test.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1472286274000" expanded="true" signature="285:430" ph="(deftest test&gt;&gt;1 ...)" />
-            <marker date="1472286274000" expanded="true" signature="432:575" ph="(deftest test&gt;&gt;2 ...)" />
-            <marker date="1472286274000" expanded="true" signature="1366:1624" ph="(deftest test-parse-0 ...)" />
+            <marker date="1472288159000" expanded="true" signature="267:412" ph="(deftest test&gt;&gt;1 ...)" />
+            <marker date="1472288159000" expanded="true" signature="414:557" ph="(deftest test&gt;&gt;2 ...)" />
+            <marker date="1472288159000" expanded="true" signature="1348:1606" ph="(deftest test-parse-0 ...)" />
           </folding>
         </state>
       </provider>
@@ -1310,7 +1237,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/combinator.clj">
+    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/parsec/combinator.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2679">
           <caret line="141" column="24" selection-start-line="141" selection-start-column="24" selection-end-line="141" selection-end-column="24" />
@@ -1318,7 +1245,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/atom_test.clj">
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/atom_test.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
@@ -1326,7 +1253,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/combinator_test.clj">
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/combinator_test.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
@@ -1334,14 +1261,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/parsec_test.clj">
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/parsec_test.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1472286274000" expanded="true" signature="285:430" ph="(deftest test&gt;&gt;1 ...)" />
-            <marker date="1472286274000" expanded="true" signature="432:575" ph="(deftest test&gt;&gt;2 ...)" />
-            <marker date="1472286274000" expanded="true" signature="1366:1624" ph="(deftest test-parse-0 ...)" />
+            <marker date="1472288159000" expanded="true" signature="267:412" ph="(deftest test&gt;&gt;1 ...)" />
+            <marker date="1472288159000" expanded="true" signature="414:557" ph="(deftest test&gt;&gt;2 ...)" />
+            <marker date="1472288159000" expanded="true" signature="1348:1606" ph="(deftest test-parse-0 ...)" />
           </folding>
         </state>
       </provider>
@@ -1354,7 +1281,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/combinator.clj">
+    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/parsec/combinator.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2679">
           <caret line="141" column="24" selection-start-line="141" selection-start-column="24" selection-end-line="141" selection-end-column="24" />
@@ -1362,7 +1289,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/atom_test.clj">
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/atom_test.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
@@ -1370,7 +1297,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/combinator_test.clj">
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/combinator_test.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="19" column="29" selection-start-line="19" selection-start-column="29" selection-end-line="19" selection-end-column="29" />
@@ -1378,14 +1305,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/parsec_test.clj">
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/parsec_test.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1472286274000" expanded="true" signature="285:430" ph="(deftest test&gt;&gt;1 ...)" />
-            <marker date="1472286274000" expanded="true" signature="432:575" ph="(deftest test&gt;&gt;2 ...)" />
-            <marker date="1472286274000" expanded="true" signature="1366:1624" ph="(deftest test-parse-0 ...)" />
+            <marker date="1472288159000" expanded="true" signature="267:412" ph="(deftest test&gt;&gt;1 ...)" />
+            <marker date="1472288159000" expanded="true" signature="414:557" ph="(deftest test&gt;&gt;2 ...)" />
+            <marker date="1472288159000" expanded="true" signature="1348:1606" ph="(deftest test-parse-0 ...)" />
           </folding>
         </state>
       </provider>
@@ -1412,7 +1339,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/text_test.clj">
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/text_test.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1479,15 +1406,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/parsec_test.clj">
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/parsec_test.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="687">
           <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
           <folding>
-            <marker date="1472286274000" expanded="true" signature="285:430" ph="(deftest test&gt;&gt;1 ...)" />
-            <marker date="1472286274000" expanded="true" signature="432:575" ph="(deftest test&gt;&gt;2 ...)" />
-            <marker date="1472286274000" expanded="true" signature="1366:1624" ph="(deftest test-parse-0 ...)" />
+            <marker date="1472288159000" expanded="true" signature="267:412" ph="(deftest test&gt;&gt;1 ...)" />
+            <marker date="1472288159000" expanded="true" signature="414:557" ph="(deftest test&gt;&gt;2 ...)" />
+            <marker date="1472288159000" expanded="true" signature="1348:1606" ph="(deftest test-parse-0 ...)" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.lein-repl-history">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="468" column="35" selection-start-line="468" selection-start-column="35" selection-end-line="468" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/atom_test.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="0" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/parsec/text.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/parsec/combinator_test.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/parsec/parsec.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/parsec/combinator.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="18" selection-start-line="1" selection-start-column="18" selection-end-line="1" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/parsec/atom.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1495,62 +1478,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/atom.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="152">
-          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.lein-repl-history">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="464" column="11" selection-start-line="464" selection-start-column="11" selection-end-line="464" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/combinator.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/parsec.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/clojure/clojure/tools/parsec/text.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/combinator_test.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/clojure/clojure/tools/parsec/atom_test.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
           <folding />
         </state>
       </provider>
