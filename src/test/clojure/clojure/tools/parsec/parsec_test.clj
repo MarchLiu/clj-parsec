@@ -1,7 +1,7 @@
-(ns org.clojars.marsliu.clj-parsec.parsec-test
+(ns clojure.tools.parsec.parsec-test
   (:use clojure.test)
-  (:use org.clojars.marsliu.clj-parsec.parsec)
-  (:use org.clojars.marsliu.clj-parsec.atom))
+  (:use clojure.tools.parsec.parsec)
+  (:use clojure.tools.parsec.atom))
 
 (deftest test>>0
   "test >> micro 0"

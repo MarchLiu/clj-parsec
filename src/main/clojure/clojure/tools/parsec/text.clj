@@ -1,7 +1,7 @@
-(ns org.clojars.marsliu.clj-parsec.text
-  (:use [org.clojars.marsliu.clj-parsec.atom :refer [one]]
-        [org.clojars.marsliu.clj-parsec.combinator :refer [try-then try-pipe skip many1]]
-        [org.clojars.marsliu.clj-parsec.parsec :refer [ >> ]]
+(ns clojure.tools.parsec.text
+  (:use [clojure.tools.parsec.atom :refer [one]]
+        [clojure.tools.parsec.combinator :refer [try-then try-pipe skip many1]]
+        [clojure.tools.parsec.parsec :refer [ >> ]]
         [clojure.string :refer [join]]))
 
 (defn char

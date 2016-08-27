@@ -1,5 +1,5 @@
-(ns org.clojars.marsliu.clj-parsec.parsec
-  (:use [org.clojars.marsliu.clj-parsec.atom :refer [return]]))
+(ns clojure.tools.parsec.parsec
+  (:use [clojure.tools.parsec.atom :refer [return]]))
 
 (defmacro >>
   "Threads the state through the parsers. Inserts state as the

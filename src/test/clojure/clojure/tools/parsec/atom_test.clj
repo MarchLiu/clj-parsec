@@ -1,6 +1,6 @@
-(ns org.clojars.marsliu.clj-parsec.atom-test
+(ns clojure.tools.parsec.atom-test
   (:use clojure.test)
-  (:use org.clojars.marsliu.clj-parsec.atom))
+  (:use clojure.tools.parsec.atom))
 
 (deftest test-one
   "test one parser"

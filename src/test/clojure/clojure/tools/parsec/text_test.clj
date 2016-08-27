@@ -1,7 +1,7 @@
-(ns org.clojars.marsliu.clj-parsec.text-test
+(ns clojure.tools.parsec.text-test
   (:require [clojure.string :only join :as s])
   (:use clojure.test)
-  (:require [org.clojars.marsliu.clj-parsec.text :as t]))
+  (:require [clojure.tools.parsec.text :as t]))
 
 (deftest test-ch-0
   "test ch parser 0"

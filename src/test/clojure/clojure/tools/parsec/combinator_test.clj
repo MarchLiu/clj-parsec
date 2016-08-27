@@ -1,9 +1,9 @@
-(ns org.clojars.marsliu.clj-parsec.combinator-test
+(ns clojure.tools.parsec.combinator-test
   (:use clojure.test
-        [org.clojars.marsliu.clj-parsec.parsec :refer :all]
-        [org.clojars.marsliu.clj-parsec.atom :refer [one]]
-        [org.clojars.marsliu.clj-parsec.combinator :refer :all]
-        [org.clojars.marsliu.clj-parsec.text :refer [char]]))
+        [clojure.tools.parsec.parsec :refer :all]
+        [clojure.tools.parsec.atom :refer [one]]
+        [clojure.tools.parsec.combinator :refer :all]
+        [clojure.tools.parsec.text :refer [char]]))
 
 (deftest test-many-0
   "test many combinator 0"
