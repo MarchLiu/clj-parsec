@@ -1,4 +1,4 @@
-(defproject org.clojars.marsliu/clj-parsec "0.2.0-SNAPSHOT"
+(defproject org.clojars.marsliu/clj-parsec "0.2.1-SNAPSHOT"
   :description "Clojure parsec library port from Haskell."
   :url "https://github.com/MarsLiu/parsec"
   :license {:name "Eclipse Public License"
