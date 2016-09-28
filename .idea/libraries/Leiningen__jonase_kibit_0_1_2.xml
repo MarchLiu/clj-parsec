@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Leiningen: jonase/kibit:0.1.2">
-    <CLASSES>
-      <root url="jar://$MAVEN_REPOSITORY$/jonase/kibit/0.1.2/kibit-0.1.2.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
