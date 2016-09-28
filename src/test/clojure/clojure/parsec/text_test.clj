@@ -60,3 +60,23 @@
     "0.1" "0.1" '()
     ".768" "0.768" '()
     "3.14f" "3.14" '(\f)))
+
+(deftest test-integer
+  "test integer parser"
+  (are [data result residue] (= (t/integer data) [result residue])
+                             "2343" "2343" '()
+                             "0073" "0073" '()
+                             "54387abc" "54387" '(\a \b \c)
+                             "-2343" "-2343" '()
+                             "-0073" "-0073" '()
+                             "-54387abc" "-54387" '(\a \b \c)))
+
+(deftest test-float
+  "test float parser"
+  (are [data result residue] (= (t/float data) [result residue])
+                             "0.1" "0.1" '()
+                             ".768" "0.768" '()
+                             "3.14f" "3.14" '(\f)
+                             "-0.1" "-0.1" '()
+                             "-.768" "-0.768" '()
+                             "-3.14f" "-3.14" '(\f)))

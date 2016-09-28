@@ -56,7 +56,7 @@ string (i.e. s)."
 (defn integer
   "This parser parses a string of digits sequence. The result should be parse a integer."
   [data]
-  (let [[res success?] (try-then (char \-))]
+  (let [[res success?] ((try-then (char \-)) data)]
     (if success?
       (let [[result residue] (unsigned-integer res)]
         [(join ["-" result]) residue])
@@ -76,7 +76,7 @@ as xx.xxx or .xxx."
   "This parser parses a string of sequence. The result should be parse a unsigned float
 as xx.xxx or .xxx."
   [data]
-  (let [[res success?] (try-then (char \-))]
+  (let [[res success?] ((try-then (char \-)) data)]
     (if success?
       (let [[right residue] (unsigned-float res)]
           [(join ["-" right]) residue])
